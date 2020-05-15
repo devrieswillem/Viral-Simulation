@@ -1,8 +1,8 @@
 MKFILE_PATH := $(abspath $(dir $(firstword $(MAKEFILE_LIST))))
 
-PATH_TO_EMCC=path/to/emcc
-HEADER_FILES = canvas.h ChartJS_handler.h html_canvas.h simulation.h statistics_handler.h subject.h
-SOURCE_FILES = ChartJS_handler.cpp html_canvas.cpp main.cpp simulation.cpp subject.cpp
+PATH_TO_EMCC=/home/willemdevries/emsdk/upstream/emscripten/emcc.py
+HEADER_FILES = canvas.h ChartJS_handler.h html_canvas.h simulation.h statistics_handler.h subject.h Strategies/MovementStrategy.h Strategies/Strategies.h
+SOURCE_FILES = ChartJS_handler.cpp html_canvas.cpp main.cpp simulation.cpp subject.cpp Strategies/Strategies.cpp
 
 OUTPUT_PATH=$(MKFILE_PATH)/build/
 OUTPUT_FILE_NAME=index.html
