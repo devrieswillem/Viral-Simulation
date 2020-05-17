@@ -101,4 +101,13 @@ bool Subject::getLocked()
 {
     return this->locked;
 }
+void Subject::setSlow(bool slow)
+{
+    this->_slow = slow;
+}
+
+bool Subject::slow()
+{
+    return this->_slow;
+}
 }

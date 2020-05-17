@@ -74,11 +74,14 @@ void Simulation::tick()
         }
     }
 
-    RegularMovement regStrat;
+    NormalMovement normalStrat;
     LockdownMovement lockStrat;
-
-    //int numberInfected = regStrat.move(dt, _subjects, counter/30);
+    RestrictedMovement restrictStrat;
+    
+    // uncomment the one you want to use and comment the other ones
+    //int numberInfected = normalStrat.move(dt, _subjects, counter/30);
     int numberInfected = lockStrat.move(dt, _subjects, counter/30);
+    //int numberInfected = restrictStrat.move(dt, _subjects, counter/30);
     
     if(counter % 30 == 0)
     {
